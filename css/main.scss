@@ -121,11 +121,20 @@ p {
   margin-top: 30px; 
 }
 
-
   .icon-skills {
     display: block;
     margin: 10px;
   }
+}
+
+#kiaOra {
+  background: url('https://s3.amazonaws.com/codyiddings-2016/kiaora-iddings.svg');
+  width: 419px;
+  height: 416px;
+}
+
+#kiaOra:hover {
+  background: url('https://s3.amazonaws.com/codyiddings-2016/myPhoto.png');
 }
 
 .input {
