@@ -93,9 +93,24 @@ p {
   width: 419px;
   height: 416px; }
 
-#kiaOra:hover {
+#kiaOra.myPhoto {
+  transition: all .2s ease-in-out; }
+
+#kiaOra.myPhoto:hover {
+  transform: scale(1.1);
   background: url("https://s3.amazonaws.com/codyiddings-2016/myPhoto.png"); }
 
+/*
+#kiaOra {
+  background: url('https://s3.amazonaws.com/codyiddings-2016/kiaora-iddings.svg');
+  width: 419px;
+  height: 416px;
+}
+
+#kiaOra:hover {
+  background: url('https://s3.amazonaws.com/codyiddings-2016/myPhoto.png');
+}
+*/
 .input {
   position: relative;
   z-index: 1;
