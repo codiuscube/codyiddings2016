@@ -98,6 +98,7 @@ p {
 
 #kiaOra.myPhoto:hover {
   transform: scale(1.1);
+  transform-origin: center;
   background: url("https://s3.amazonaws.com/codyiddings-2016/myPhoto.png"); }
 
 /*
