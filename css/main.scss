@@ -445,6 +445,23 @@ footer {
 
 
 
+.dot-map{
+  z-index: 100;
+}
+
+.codys-head{
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 200;
+  width: 240px;
+}
+
+.dot-head:hover .codys-head{ 
+  display:block; 
+}
 
 
 
