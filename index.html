@@ -17,16 +17,7 @@
     <link rel="stylesheet" href="css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="css/main.css">
 
-    <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
-    <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js'></script>
-    <script>
-jQuery(document).ready(function($){
-    $('#kiraOra').hover(
-         function(){ $(this).addClass('myPhoto') },
-         function(){ $(this).removeClass('myPhoto') }
-    )
-});
-</script>
+   
 
   </head>
 
@@ -52,6 +43,7 @@ jQuery(document).ready(function($){
           </div>
           <div class="col-md-4">
             <div id="kiaOra" class="myPhoto"></div>
+          </div>
         </div>
       </div>
     </div> <!-- End .hero -->
@@ -172,7 +164,15 @@ jQuery(document).ready(function($){
           </ul>
     </footer>
 
-
+    <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js'></script>
+    <script>
+      jQuery(document).ready(function($){
+          $('#kiraOra').hover(
+               function(){ $(this).addClass('myPhoto') },
+               function(){ $(this).removeClass('myPhoto') }
+          )
+      });
+    </script>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script>
