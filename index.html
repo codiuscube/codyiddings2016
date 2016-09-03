@@ -14,19 +14,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="css/main.css">
-
-    <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
-    <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js'></script>
-    <script>
-jQuery(document).ready(function($){
-    $('#kiraOra').hover(
-         function(){ $(this).addClass('myPhoto') },
-         function(){ $(this).removeClass('myPhoto') }
-    )
-});
-</script>
+    
+    
 
   </head>
 
@@ -44,14 +34,18 @@ jQuery(document).ready(function($){
     <div class="hero">
       <div class="container">
         <div class="row">
-          <div class="col-md-8">
+          <div class="col-md-7">
             <H3>Shaloha</H3>
             <h1>My name is Cody Iddings.</br>  I’m&nbsp;an <a class="highlight" href="https://www.linkedin.com/in/codyiddings" target="blank">experience designer,</a> product designer & entrepreneuer based in Auckland,&nbsp;New Zealand.</h1>
             <a class="button" href="#contact">How may I help you?</a>
 
           </div>
-          <div class="col-md-4">
-            <div id="kiaOra" class="myPhoto"></div>
+          <div class="col-md-5">
+            <div class="wrap dot-head">
+              <img src="https://s3.amazonaws.com/codyiddings-2016/kiaora-iddings.svg" class="dot-map img-responsive center-block">
+              <img src="https://s3.amazonaws.com/codyiddings-2016/myPhoto.png" class="codys-head">
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -128,40 +122,69 @@ jQuery(document).ready(function($){
         </div>
       </div>
     </div> <!-- End .hero -->
+    
 
     <div class="hero">
       <div class="container">
         <div class="row">
           <div class="col-md-8">
-          <H3 id="contact">Contact Me</H3>
-            <H2>Coffee, lunch, yarn, or even a surf.<h2>
-            <span class="input input--hoshi">
-          <input class="input__field input__field--hoshi" type="text" id="input-4" />
-          <label class="input__label input__label--hoshi input__label--hoshi-color-2" for="input-4">
-            <span class="input__label-content input__label-content--hoshi">Name</span>
-          </label>
-        </span>
-        <span class="input input--hoshi">
-          <input class="input__field input__field--hoshi" type="text" id="input-5" />
-          <label class="input__label input__label--hoshi input__label--hoshi-color-2" for="input-5">
-            <span class="input__label-content input__label-content--hoshi">Email address</span>
-          </label>
-        </span>
-        <span class="input input--hoshi">
-          <input class="input__field input__field--hoshi" type="text" id="input-6" />
-          <label class="input__label input__label--hoshi input__label--hoshi-color-2" for="input-6">
-            <span class="input__label-content input__label-content--hoshi">Message</span>
-          </label>
-        </span>
-        <a class="button-btm" href="#send" target="blank">Send message</a>
+            
 
-          </div>
-          <div class="col-md-4">
-          <a class="button-btm" href="https://www.linkedin.com/in/codyiddings" target="blank">View CV on LinkedIn</a>
+
+            <div class="row">
+              <div class="col-xs-12">
+                <h3 id="contact">Contact Me</h3>
+                <h2>Coffee, lunch, yarn, or even a surf.</h2>
+              </div>
+            </div>
+            
+            <div class="row">
+              <div class="col-xs-12">
+                <span class="input input--hoshi">
+                  <input class="input__field input__field--hoshi" type="text" id="input-4" />
+                  <label class="input__label input__label--hoshi input__label--hoshi-color-2" for="input-4">
+                    <span class="input__label-content input__label-content--hoshi">Name</span>
+                  </label>
+                </span>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-12">
+                <span class="input input--hoshi">
+                  <input class="input__field input__field--hoshi" type="text" id="input-5" />
+                  <label class="input__label input__label--hoshi input__label--hoshi-color-2" for="input-5">
+                    <span class="input__label-content input__label-content--hoshi">Email address</span>
+                  </label>
+                </span>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-12">
+                <span class="input input--hoshi">
+                  <input class="input__field input__field--hoshi" type="text" id="input-6" />
+                  <label class="input__label input__label--hoshi input__label--hoshi-color-2" for="input-6">
+                    <span class="input__label-content input__label-content--hoshi">Message</span>
+                  </label>
+                </span>
+              </div>
+            </div>
+
+              <div class="row">
+                <div class="col-xs-12">
+                  <a class="button-btm" href="#send" target="blank">Send message</a>
+                </div>
+              </div>
+              
+            
+
+          </div><!-- /.col-md-8 -->
+
+            <div class="col-md-4">
+              <a class="button-btm" href="https://www.linkedin.com/in/codyiddings" target="_blank">View CV on LinkedIn</a>
+            </div>
 
           </div>
         </div>
-      </div>
     </div> <!-- End .hero -->
     
     <footer>
@@ -172,9 +195,59 @@ jQuery(document).ready(function($){
             <li>Photo by<a href="http://instagram.com/brycejohnson" target="blank"> @brycejohnson</a></li>
           </ul>
     </footer>
+    <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js'></script>
+    <script src="js/classie.js"></script>
+    <script>
+      (function() {
+        // trim polyfill : https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/Trim
+        if (!String.prototype.trim) {
+          (function() {
+            // Make sure we trim BOM and NBSP
+            var rtrim = /^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g;
+            String.prototype.trim = function() {
+              return this.replace(rtrim, '');
+            };
+          })();
+        }
 
+        [].slice.call( document.querySelectorAll( 'input.input__field' ) ).forEach( function( inputEl ) {
+          // in case the input is already filled..
+          if( inputEl.value.trim() !== '' ) {
+            classie.add( inputEl.parentNode, 'input--filled' );
+          }
 
+          // events:
+          inputEl.addEventListener( 'focus', onInputFocus );
+          inputEl.addEventListener( 'blur', onInputBlur );
+        } );
 
+        function onInputFocus( ev ) {
+          classie.add( ev.target.parentNode, 'input--filled' );
+        }
+
+        function onInputBlur( ev ) {
+          if( ev.target.value.trim() === '' ) {
+            classie.remove( ev.target.parentNode, 'input--filled' );
+          }
+        }
+      })();
+    </script>
+    <script>
+      $(function() {
+        $('a[href*="#"]:not([href="#"])').click(function() {
+          if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+            var target = $(this.hash);
+            target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+            if (target.length) {
+              $('html, body').animate({
+                scrollTop: target.offset().top
+              }, 1000);
+              return false;
+            }
+          }
+        });
+      });
+    </script>
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script>
         (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
