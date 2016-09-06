@@ -42,7 +42,7 @@
           </div>
           <div class="col-md-5">
             <div class="wrap dot-head">
-              <img src="https://s3.amazonaws.com/codyiddings-2016/kiaora-iddings.svg" class="dot-map img-responsive center-block">
+              <img src="https://s3.amazonaws.com/codyiddings-2016/kiaora-iddings.svg" alt="Illustration from NounProject Chameleon Design" class="dot-map img-responsive center-block">
               <img src="https://s3.amazonaws.com/codyiddings-2016/myPhoto.png" class="codys-head">
             </div>
           </div>
@@ -127,7 +127,7 @@
     <div class="hero">
       <div class="container">
         <div class="row">
-          <div class="col-md-8">
+          <div class="col-md-7">
             
 
 
@@ -138,11 +138,12 @@
               </div>
             </div>
             
+            <form name="catwebformform83956" method="post" onsubmit="return checkWholeForm83956(this)" enctype="multipart/form-data" action="/FormProcessv2.aspx?WebFormID=796444&OID={module_oid}&OTYPE={module_otype}&EID={module_eid}&CID={module_cid}"> 
             <div class="row">
               <div class="col-xs-12">
                 <span class="input input--hoshi">
                   <input class="input__field input__field--hoshi" type="text" id="input-4" />
-                  <label class="input__label input__label--hoshi input__label--hoshi-color-2" for="input-4">
+                  <label class="input__label input__label--hoshi input__label--hoshi-color-2" for="CAT_Custom_2074353">
                     <span class="input__label-content input__label-content--hoshi">Name</span>
                   </label>
                 </span>
@@ -152,7 +153,7 @@
               <div class="col-xs-12">
                 <span class="input input--hoshi">
                   <input class="input__field input__field--hoshi" type="text" id="input-5" />
-                  <label class="input__label input__label--hoshi input__label--hoshi-color-2" for="input-5">
+                  <label class="input__label input__label--hoshi input__label--hoshi-color-2" name="EmailAddress" id="EmailAddress">
                     <span class="input__label-content input__label-content--hoshi">Email address</span>
                   </label>
                 </span>
@@ -162,25 +163,34 @@
               <div class="col-xs-12">
                 <span class="input input--hoshi">
                   <input class="input__field input__field--hoshi" type="text" id="input-6" />
-                  <label class="input__label input__label--hoshi input__label--hoshi-color-2" for="input-6">
+                  <label class="input__label input__label--hoshi input__label--hoshi-color-2" for="CAT_Custom_2074352">
                     <span class="input__label-content input__label-content--hoshi">Message</span>
-                  </label>
+                  </label> 
                 </span>
               </div>
             </div>
 
               <div class="row">
                 <div class="col-xs-12">
-                  <a class="button-btm" href="#send" target="blank">Send message</a>
+                  <a class="button-btm" type="submit" value="Submit" id="catwebformbutton">Send message</a>
                 </div>
               </div>
+
+<script type="text/javascript">
+//<![CDATA[
+var submitcount83956 = 0;function checkWholeForm83956(theForm){var why = "";if (theForm.EmailAddress) why += checkEmail(theForm.EmailAddress.value); if (theForm.CAT_Custom_2074353) why += isEmpty(theForm.CAT_Custom_2074353.value, "Name");if (theForm.CAT_Custom_2074352) why += isEmpty(theForm.CAT_Custom_2074352.value, "Message");if(why != ""){alert(why);return false;}if(submitcount83956 == 0){submitcount83956++;theForm.submit();return false;}else{alert("Form submission is in progress.");return false;}}
+//]]>
+</script></form>
               
             
 
-          </div><!-- /.col-md-8 -->
+          </div><!-- /.col-md-7 -->
 
-            <div class="col-md-4">
-              <a class="button-btm" href="https://www.linkedin.com/in/codyiddings" target="_blank">View CV on LinkedIn</a>
+            <div class="col-md-5">
+              <div class="wrap dot-head">
+              <img src="https://s3.amazonaws.com/codyiddings-2016/Linkedin.svg" class="dot-map img-responsive center-block">
+              <a class="button-li" href="https://www.linkedin.com/in/codyiddings" target="_blank">View CV</a>
+              </div>
             </div>
 
           </div>
@@ -191,8 +201,8 @@
       <div class="container">
         <div class="row">
           <ul>
-            <li>Design by<a href="http://instagram.com/codyandchelsea" target="blank"> @codyandchelsea</a></li>
-            <li>Photo by<a href="http://instagram.com/brycejohnson" target="blank"> @brycejohnson</a></li>
+            <li><img src="https://s3.amazonaws.com/codyiddings-2016/messengerIcon.svg" fill="#fffff" class="chat"></img></li>
+            <li>Want to keep it casual? Chat&nbsp;with&nbsp;me&nbsp;on&nbsp;<a href="https://m.me/cody.iddings" target="blank">Facebook&nbsp;Messenger</a></li>
           </ul>
     </footer>
     <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js'></script>
@@ -248,6 +258,9 @@
         });
       });
     </script>
+
+    <!-- Form -->
+    <script type="text/javascript" src="/CatalystScripts/ValidationFunctions.js?vs=b2133.r498670-phase1"></script>
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script>
         (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=

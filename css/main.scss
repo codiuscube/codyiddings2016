@@ -130,6 +130,24 @@ p {
   margin-top: 30px; 
 }
 
+.button-li {
+  padding: 11px 22px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: $yellow;
+  display: inline-block;
+  font-family: $karla;
+  font-weight: 700;
+  font-size: 15px;
+  text-transform: uppercase;
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 200;
+
+}
+
   .icon-skills {
     display: block;
     margin: 10px;
@@ -137,36 +155,48 @@ p {
 }
 
 footer {
-  background: $dark-grey;
-  padding-bottom: 50px;
+  background: $light-blue;
+  padding-bottom: 20px;
+  padding-top: 29px;
+  padding-left: 25px;
   width: 100%;
   a {
-    color: white;
-    background: rgba($blue,.08);
+    color: $blue;    
     &:visited {
-      color: white;
-      background: rgba($blue,.08);
+      color: $blue;
     }
     &:hover {
-      color: white;
-      background: rgba($blue,.5);
+      color: $blue;
+      background: $yellow;
     }
   }
 
   ul {
     padding-left: 0;
     li {
-      color: $light-blue;
+      display: inline;
+      color: $blue;
       font-family: $karla;
       font-weight: 500;
       font-size: 18px;
       line-height: 1.5;
-      padding-top: 33px;
       list-style-type: none;
+      &:before {
+          content: "";
+          height: 0px;
+          width: 0px;
+        }
+        &:first-child {
+          &:before {
+            content: none;
+          }
+        }
     }
   }
-  img {
-    text-align: center;
+  .chat {
+  width: 20px;
+  height: 20px;
+  display: none;
   }
 }
 
@@ -175,31 +205,24 @@ footer {
 @media (min-width: 992px) {
 
   footer {
-    background: $dark-grey;
-    // height: 200px; /* !important */
+    background: $light-blue;
     width: 100%;
 
     ul {
       li {
         display: inline-block;
-        padding-left: 15px;
-        margin: 0px 10px;
+        margin: 0px 5px;
         position: relative;
-        color: $light-blue;
+        color: $blue;
         font-family: $karla;
         font-weight: 500;
         font-size: 18px;
-        padding-top: 33px;
+        padding-top: 5px;
         right: 25px;
         &:before {
           content: "";
-          height: 4px;
-          width: 4px;
-          background: $light-blue;
-          border-radius: 2px;
-          position: absolute;
-          left: -7px;
-          top: 47px;
+          height: 0px;
+          width: 0px;
         }
         &:first-child {
           &:before {
@@ -208,6 +231,11 @@ footer {
         }
       }
     }
+    .chat {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  }
   }
 
 } // End MQ 992px
@@ -219,18 +247,17 @@ footer {
 .dot-map{
   //@extend .center-block;
 }
-<<<<<<< HEAD
+
 #kiaOra.myPhoto:hover { 
   transform: scale(1.1);
   transform-origin: center;
   background: url('https://s3.amazonaws.com/codyiddings-2016/myPhoto.png');
-=======
+}
 
 .dot-head{
 
   @media (max-width: 992px) {
     margin-top: 50px;
->>>>>>> pr/1
   }
 }
 
@@ -243,10 +270,10 @@ footer {
   width: 240px;
   opacity: 0;
 
-  -webkit-transition: opacity 1s ease-in-out;
-  -moz-transition: opacity 1s ease-in-out;
-  -o-transition: opacity 1s ease-in-out;
-  transition: opacity 1s ease-in-out;
+  -webkit-transition: opacity .5s ease-in-out;
+  -moz-transition: opacity .5s ease-in-out;
+  -o-transition: opacity .5s ease-in-out;
+  transition: opacity .5s ease-in-out;
 }
 
 .dot-head:hover .codys-head{ 
@@ -295,7 +322,7 @@ footer {
   color: $white;
   //opacity: 0.7;
   font-weight: 400;
-  font-size: 18px;
+  font-size: 20px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-touch-callout: none;
@@ -369,7 +396,7 @@ footer {
 }
 
 .input__label--hoshi-color-2::after {
-  border-color: $white;
+  border-color: $yellow;
 }
 
 .input__label--hoshi-color-3::after {
@@ -391,8 +418,10 @@ footer {
 .input--filled .input__label-content--hoshi {
   -webkit-animation: anim-1 0.3s forwards;
   animation: anim-1 0.3s forwards;
-  margin-top: 0;
-  font-size: 18px;
+  margin-top: 10px;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 700;
   color: $yellow;
   opacity: 1;
 }
