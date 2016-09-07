@@ -6,36 +6,46 @@ html {
 
 /* COLOR VARIABLES */
 body {
-  background: #0E58D1; }
+  background: #0E58D1;
+  font-family: "Karla", sans-serif; }
 
 /* TYPOGRAPHY */
 a {
-  text-decoration: none; }
+  text-decoration: none;
+  transition: all 0.3s ease; }
   a:visited {
     text-decoration: none; }
   a:hover {
     text-decoration: none; }
 
 h1 {
-  font-family: 'Karla', sans-serif;
+  font-family: "Karla", sans-serif;
   font-weight: 700;
   font-size: 46px;
   margin-top: 20px;
   margin-bottom: 30px; }
 
 h2 {
-  font-family: 'Karla', sans-serif;
+  font-family: "Karla", sans-serif;
   font-weight: 700;
   font-size: 31px; }
 
 h3 {
-  font-family: 'Karla', sans-serif;
+  font-family: "Karla", sans-serif;
   font-weight: 700;
   font-size: 15px;
   text-transform: uppercase; }
 
+h4 {
+  font-family: "Karla", sans-serif;
+  color: rgba(255, 255, 255, 0.5);
+  font-weight: 700;
+  font-size: 13px;
+  text-transform: uppercase;
+  padding-top: 10px; }
+
 p {
-  font-family: 'Karla', sans-serif;
+  font-family: "Karla", sans-serif;
   font-weight: 300;
   font-size: 20px;
   line-height: 1.5; }
@@ -43,8 +53,8 @@ p {
 .hero {
   background: #0E58D1;
   color: white;
-  margin-bottom: 110px;
-  margin-top: 110px; }
+  margin-bottom: 10px;
+  margin-top: 10px; }
   .hero a {
     color: #EDE719; }
     .hero a:visited {
@@ -68,165 +78,284 @@ p {
     border-width: 2px;
     border-color: #EDE719;
     display: inline-block;
-    font-family: 'Karla', sans-serif;
+    font-family: "Karla", sans-serif;
     font-weight: 700;
     font-size: 15px;
     text-transform: uppercase; }
-  .hero .icon {
-    display: block;
-    margin: 10px; }
-
-.contact {
-  background: #0E58D1;
-  color: white;
-  margin-bottom: 110px;
-  margin-top: 110px; }
-  .contact a {
+  .hero .button-btm {
+    padding: 11px 22px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #EDE719;
+    display: inline-block;
+    font-family: "Karla", sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    text-transform: uppercase;
+    margin-top: 30px;
+    background: #0E58D1;
     color: #EDE719; }
-    .contact a:visited {
-      color: #EDE719; }
-    .contact a:hover {
-      color: #0E58D1;
-      background: #EDE719; }
+  .hero .button-btm:hover {
+    transition: all 0.3s ease;
+    color: #0E58D1;
+    background: #EDE719; }
+  .hero .button-li {
+    padding: 11px 22px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #EDE719;
+    display: inline-block;
+    font-family: "Karla", sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    text-transform: uppercase;
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 200; }
+  .hero .icon-skills {
+    display: block;
+    margin: 10px;
+    margin-bottom: -8px; }
 
-/* Nao */
-.input--nao {
-  overflow: hidden;
-  padding-top: 1em; }
-
-.input__field--nao {
-  padding: 0.5em 0em 0.25em;
-  width: 100%;
-  background: transparent;
-  color: #9da8b2;
-  font-size: 1.25em; }
-
-.input__label--nao {
-  position: absolute;
-  top: 0.95em;
-  font-size: 0.85em;
-  left: 0;
-  display: block;
-  width: 100%;
-  text-align: left;
-  padding: 0em;
-  pointer-events: none;
-  -webkit-transform-origin: 0 0;
-  transform-origin: 0 0;
-  -webkit-transition: -webkit-transform 0.2s 0.15s, color 1s;
-  transition: transform 0.2s 0.15s, color 1s;
-  -webkit-transition-timing-function: ease-out;
-  transition-timing-function: ease-out; }
-
-.graphic--nao {
-  stroke: #92989e;
-  pointer-events: none;
-  -webkit-transition: -webkit-transform 0.7s, stroke 0.7s;
-  transition: transform 0.7s, stroke 0.7s;
-  -webkit-transition-timing-function: cubic-bezier(0, 0.25, 0.5, 1);
-  transition-timing-function: cubic-bezier(0, 0.25, 0.5, 1); }
-
-.input__field--nao:focus + .input__label--nao,
-.input--filled .input__label--nao {
-  color: #333;
-  -webkit-transform: translate3d(0, -1.25em, 0) scale3d(0.75, 0.75, 1);
-  transform: translate3d(0, -1.25em, 0) scale3d(0.75, 0.75, 1); }
-
-.input__field--nao:focus ~ .graphic--nao,
-.input--filled .graphic--nao {
-  stroke: #333;
-  -webkit-transform: translate3d(-66.6%, 0, 0);
-  transform: translate3d(-66.6%, 0, 0); }
-
-/* 
-
-.header-bar {
-  height: 110px;
-  /*width: 100%;*/
-  /*
-  background: $light-blue;
-  padding: 38px 0px;
-
-  nav {
-    a.logo {
-      background: none;
-      color: $blue;
-      font-family: 'Karla', sans-serif;
-      font-weight: 700;
-      font-size: 18px;
-      text-transform: uppercase;
-      text-align: center;
-      }
-  }
-}
-
-
-Cody's Instagram
-
-  .instagram {
-
-    .image {
-      margin-top: 100px;
-      background: $dark-grey;
-      height: 264px;
-
-      &:hover {
-        opacity: .90;
-      }
-    }
-    }
-
-*/
 footer {
-  background: #151515;
-  padding-bottom: 50px;
+  background: #dcfeff;
+  padding-bottom: 20px;
+  padding-top: 29px;
+  padding-left: 25px;
   width: 100%; }
   footer a {
-    color: white;
-    background: rgba(14, 88, 209, 0.08); }
+    color: #0E58D1; }
     footer a:visited {
-      color: white;
-      background: rgba(14, 88, 209, 0.08); }
+      color: #0E58D1; }
     footer a:hover {
-      color: white;
-      background: rgba(14, 88, 209, 0.5); }
+      color: #0E58D1;
+      background: #EDE719; }
   footer ul {
     padding-left: 0; }
     footer ul li {
-      color: #dcfeff;
-      font-family: 'Karla', sans-serif;
+      display: inline;
+      color: #0E58D1;
+      font-family: "Karla", sans-serif;
       font-weight: 500;
       font-size: 18px;
       line-height: 1.5;
-      padding-top: 33px;
       list-style-type: none; }
-  footer img {
-    text-align: center; }
+      footer ul li:before {
+        content: "";
+        height: 0px;
+        width: 0px; }
+      footer ul li:first-child:before {
+        content: none; }
+  footer .chat {
+    width: 20px;
+    height: 20px;
+    display: none; }
 
 /* MEDIA QUERIES */
 @media (min-width: 992px) {
+  .hero {
+    margin-bottom: 110px;
+    margin-top: 110px; }
+
   footer {
-    background: #151515;
+    background: #dcfeff;
     width: 100%; }
     footer ul li {
       display: inline-block;
-      padding-left: 15px;
-      margin: 0px 10px;
+      margin: 0px 5px;
       position: relative;
-      color: #dcfeff;
-      font-family: 'Karla', sans-serif;
+      color: #0E58D1;
+      font-family: "Karla", sans-serif;
       font-weight: 500;
       font-size: 18px;
-      padding-top: 33px;
+      padding-top: 5px;
       right: 25px; }
       footer ul li:before {
         content: "";
-        height: 4px;
-        width: 4px;
-        background: #dcfeff;
-        border-radius: 2px;
-        position: absolute;
-        left: -7px;
-        top: 47px; }
+        height: 0px;
+        width: 0px; }
       footer ul li:first-child:before {
-        content: none; } }
+        content: none; }
+    footer .chat {
+      width: 20px;
+      height: 20px;
+      display: inline-block; } }
+#kiaOra.myPhoto:hover {
+  transform: scale(1.1);
+  transform-origin: center;
+  background: url("https://s3.amazonaws.com/codyiddings-2016/myPhoto.png"); }
+
+@media (max-width: 992px) {
+  .dot-head {
+    margin-top: 50px; } }
+
+.codys-head {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 200;
+  width: 240px;
+  opacity: 0;
+  -webkit-transition: opacity .5s ease-in-out;
+  -moz-transition: opacity .5s ease-in-out;
+  -o-transition: opacity .5s ease-in-out;
+  transition: opacity .5s ease-in-out; }
+
+.dot-head:hover .codys-head {
+  opacity: 1; }
+
+.input [type=submit] {
+  color: #EDE719;
+  background: #0E58D1; }
+
+.input {
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  margin: 1em 1em 1em 0;
+  width: calc(100% - 2em);
+  vertical-align: top; }
+
+.input__field {
+  position: relative;
+  display: block;
+  float: right;
+  padding: 0.8em;
+  width: 60%;
+  border: none;
+  border-radius: 0;
+  background: #f0f0f0;
+  color: #aaa;
+  font-weight: 400;
+  font-family: "Karla", sans-serif;
+  -webkit-appearance: none;
+  /* for box shadows to show on iOS */ }
+
+.input__field:focus {
+  outline: none; }
+
+.input__label {
+  display: inline-block;
+  float: right;
+  padding: 0 1em;
+  width: 40%;
+  color: #fff;
+  font-weight: 400;
+  font-size: 20px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+
+.input__label-content {
+  position: relative;
+  display: block;
+  padding: 1.6em 0 0 0;
+  width: 100%;
+  margin-top: 1em; }
+
+/* Hoshi */
+.input--hoshi {
+  overflow: hidden; }
+
+.input__field--hoshi {
+  margin-top: 1em;
+  padding: 0.5em 0.15em 1em 0.15em;
+  width: 100%;
+  background: transparent;
+  color: #fff;
+  font-size: 24px; }
+
+.input__label--hoshi {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 0 0.25em;
+  width: 100%;
+  height: calc(100%);
+  text-align: left;
+  pointer-events: none; }
+
+.input__label-content--hoshi {
+  position: absolute; }
+
+.input__label--hoshi::before,
+.input__label--hoshi::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: calc(100%);
+  border-bottom: 1px solid #B9C1CA; }
+
+.input__label--hoshi::after {
+  margin-top: 2px;
+  border-bottom: 4px solid red;
+  -webkit-transform: translate3d(-100%, 0, 0);
+  transform: translate3d(-100%, 0, 0);
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: transform 0.3s; }
+
+.input__label--hoshi-color-1::after {
+  border-color: #00aaff; }
+
+.input__label--hoshi-color-2::after {
+  border-color: #EDE719; }
+
+.input__label--hoshi-color-3::after {
+  border-color: #ff5500; }
+
+.input__field--hoshi:focus + .input__label--hoshi::after,
+.input--filled .input__label--hoshi::after {
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0); }
+
+.input__field--hoshi + .input__label--hoshi .input__label-content--hoshi,
+.input--filled .input__label-content--hoshi {
+  opacity: 0.5; }
+
+.input__field--hoshi:focus + .input__label--hoshi .input__label-content--hoshi,
+.input--filled .input__label-content--hoshi {
+  -webkit-animation: anim-1 0.3s forwards;
+  animation: anim-1 0.3s forwards;
+  margin-top: 10px;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 700;
+  color: #EDE719;
+  opacity: 1; }
+
+@-webkit-keyframes anim-1 {
+  50% {
+    opacity: 0;
+    -webkit-transform: translate3d(1em, 0, 0);
+    transform: translate3d(1em, 0, 0); }
+  51% {
+    opacity: 0;
+    -webkit-transform: translate3d(-1em, -40%, 0);
+    transform: translate3d(-1em, -40%, 0); }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, -40%, 0);
+    transform: translate3d(0, -40%, 0); } }
+@keyframes anim-1 {
+  50% {
+    opacity: 0;
+    -webkit-transform: translate3d(1em, 0, 0);
+    transform: translate3d(1em, 0, 0); }
+  51% {
+    opacity: 0;
+    -webkit-transform: translate3d(-1em, -40%, 0);
+    transform: translate3d(-1em, -40%, 0); }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, -40%, 0);
+    transform: translate3d(0, -40%, 0); } }
