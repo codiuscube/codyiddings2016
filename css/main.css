@@ -36,6 +36,14 @@ h3 {
   font-size: 15px;
   text-transform: uppercase; }
 
+h4 {
+  font-family: "Karla", sans-serif;
+  color: rgba(255, 255, 255, 0.5);
+  font-weight: 700;
+  font-size: 13px;
+  text-transform: uppercase;
+  padding-top: 10px; }
+
 p {
   font-family: "Karla", sans-serif;
   font-weight: 300;
@@ -45,8 +53,8 @@ p {
 .hero {
   background: #0E58D1;
   color: white;
-  margin-bottom: 110px;
-  margin-top: 110px; }
+  margin-bottom: 10px;
+  margin-top: 10px; }
   .hero a {
     color: #EDE719; }
     .hero a:visited {
@@ -84,7 +92,13 @@ p {
     font-weight: 700;
     font-size: 15px;
     text-transform: uppercase;
-    margin-top: 30px; }
+    margin-top: 30px;
+    background: #0E58D1;
+    color: #EDE719; }
+  .hero .button-btm:hover {
+    transition: all 0.3s ease;
+    color: #0E58D1;
+    background: #EDE719; }
   .hero .button-li {
     padding: 11px 22px;
     border-style: solid;
@@ -102,7 +116,8 @@ p {
     z-index: 200; }
   .hero .icon-skills {
     display: block;
-    margin: 10px; }
+    margin: 10px;
+    margin-bottom: -8px; }
 
 footer {
   background: #dcfeff;
@@ -140,6 +155,10 @@ footer {
 
 /* MEDIA QUERIES */
 @media (min-width: 992px) {
+  .hero {
+    margin-bottom: 110px;
+    margin-top: 110px; }
+
   footer {
     background: #dcfeff;
     width: 100%; }
@@ -187,6 +206,10 @@ footer {
 
 .dot-head:hover .codys-head {
   opacity: 1; }
+
+.input [type=submit] {
+  color: #EDE719;
+  background: #0E58D1; }
 
 .input {
   position: relative;
