@@ -114,10 +114,41 @@ p {
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 200; }
+  .hero .button-cv {
+    padding: 11px 22px;
+    margin-top: 15px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #EDE719;
+    display: inline-block;
+    font-family: "Karla", sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    text-transform: uppercase; }
   .hero .icon-skills {
     display: block;
     margin: 10px;
     margin-bottom: -8px; }
+
+.card {
+  background-color: #0C50BF; }
+
+.card-block {
+  padding: 10%; }
+
+#adventure {
+  background-image: url("https://lh3.googleusercontent.com/aT06TNKHgPEZezNmaz172MCdh36p3s8K6rA6w6IfhIpbx7cFpH4Y1kbaFBROYqvaUtIsyaCpNmJ5JC1u0NSFMV5U_eGrY1KorgzVwS4D0wLc_yq9wVYs7uR6A4U3qXcmfSalAmpxeiCqIyd-FxlK-IH-6RLD79liVc6jIx0cVrwwI4BpF-Yt9rVkpQPZErhGObZ-BxhX_F-x9UpNvDr6VBJc7FIFElSbdkS2JuFc79dcsPyEgg7o9Pmgd-w1-PCWQvZyNjc0ar9DhUTVkBbP68JOle-tg3a6DcumiEPQemaTBjA4qe6dxgnaeyaBAseaCByG-XzydhtNWcVDPvZfPBmswAaf1vm2n4Azar7jQ7_u943mAMim9Brbtl-nNNmy1fRkk-QZ6ljStxu7y8xTYF8CcR2NiaFsXVVEH2zHTfKonYIffHYiuXYyCrVZgqyuI8jcFpZGJgxbt7hTU4rzakaS2NKLyqlTKB2VVocF44d_OQzwJFCjRoXlLOQqWcZaTuooF8TfistYx2mGegLKtOPfDZuSLSJoPdU8cZFIvZTZC0KBGJ2mhHeueEFEesLw8rfmsQSVymJthQoUH03lybZpPPqLrSa8n4ZXcuwFGsDCEypCpQ=w1702-h1276-no");
+  background-color: #0C50BF;
+  background-blend-mode: color-dodge;
+  background-size: cover;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  -webkit-box-shadow: 0px 10px 100px 0px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0px 10px 100px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 10px 100px 0px rgba(0, 0, 0, 0.1); }
 
 footer {
   background: #dcfeff;
