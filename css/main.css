@@ -44,12 +44,28 @@ h4 {
   text-transform: uppercase;
   padding-top: 10px; }
 
+h4.attribution {
+  padding-left: 40px;
+  margin-top: -15px;
+  display: inline-block; }
+
 p {
   font-family: "Karla", sans-serif;
   font-weight: 300;
   font-size: 20px;
   line-height: 1.5; }
 
+/* list style
+ul.a {
+  li {  
+  font-family: $karla;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 1.5;
+  margin: 0px 0px 0px -15px;
+  }
+}
+*/
 .hero {
   background: #0E58D1;
   color: white;
@@ -163,9 +179,9 @@ footer {
     footer a:hover {
       color: #0E58D1;
       background: #EDE719; }
-  footer ul {
+  footer ul.b {
     padding-left: 0; }
-    footer ul li {
+    footer ul.b li {
       display: inline;
       color: #0E58D1;
       font-family: "Karla", sans-serif;
@@ -173,11 +189,11 @@ footer {
       font-size: 18px;
       line-height: 1.5;
       list-style-type: none; }
-      footer ul li:before {
+      footer ul.b li:before {
         content: "";
         height: 0px;
         width: 0px; }
-      footer ul li:first-child:before {
+      footer ul.b li:first-child:before {
         content: none; }
   footer .chat {
     width: 20px;
@@ -193,7 +209,7 @@ footer {
   footer {
     background: #dcfeff;
     width: 100%; }
-    footer ul li {
+    footer ul.b li {
       display: inline-block;
       margin: 0px 5px;
       position: relative;
@@ -203,11 +219,11 @@ footer {
       font-size: 18px;
       padding-top: 5px;
       right: 25px; }
-      footer ul li:before {
+      footer ul.b li:before {
         content: "";
         height: 0px;
         width: 0px; }
-      footer ul li:first-child:before {
+      footer ul.b li:first-child:before {
         content: none; }
     footer .chat {
       width: 20px;
