@@ -115,7 +115,6 @@ ul.a {
     }
   }
 
-
 .blockquote {
   font-family: $karla;
   font-weight: 500;
@@ -207,6 +206,22 @@ ul.a {
 
 .card-block {  
   padding: 10%;
+}
+
+
+.work {  
+  background-color: $dark-blue;
+  padding: 10% 5% 10% 5%;
+}
+
+.workcard {  
+  background-color: $dark-blue;
+  padding: 10% 5% 10% 5%;
+  margin-top: 10px;
+}
+
+  .selection {  
+  padding-top: 5%;
 }
 
 .user {
@@ -303,6 +318,10 @@ footer {
   .hero {
   margin-bottom: 110px;
   margin-top: 110px;
+}
+
+  .selection {  
+  padding-top: 0;
 }
 
   footer {

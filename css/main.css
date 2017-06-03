@@ -152,6 +152,18 @@ ul.a {
 .card-block {
   padding: 10%; }
 
+.work {
+  background-color: #0C50BF;
+  padding: 10% 5% 10% 5%; }
+
+.workcard {
+  background-color: #0C50BF;
+  padding: 10% 5% 10% 5%;
+  margin-top: 10px; }
+
+.selection {
+  padding-top: 5%; }
+
 .user {
   display: inline-block;
   width: 50px;
@@ -223,6 +235,8 @@ footer {
   .hero {
     margin-bottom: 110px;
     margin-top: 110px; }
+  .selection {
+    padding-top: 0; }
   footer {
     background: #dcfeff;
     width: 100%; }
