@@ -1,6 +1,6 @@
 /* ==========================================================================
-   Author's custom styles
-   ========================================================================== */
+     Author's custom styles
+     ========================================================================== */
 html {
   -webkit-font-smoothing: antialiased; }
 
@@ -45,9 +45,9 @@ h4 {
   padding-top: 10px; }
 
 h4.attribution {
-  padding-left: 40px;
-  margin-top: -15px;
-  display: inline-block; }
+  padding-left: 60px;
+  margin-top: -55px;
+  display: block; }
 
 p {
   font-family: "Karla", sans-serif;
@@ -79,13 +79,13 @@ ul.a {
       color: #0E58D1;
       background: #EDE719; }
   .hero .blockquote {
-    font-family: 'Tillana', cursive;
+    font-family: "Karla", sans-serif;
     font-weight: 500;
     border-left: 2px solid #EDE719;
     padding-left: 20px;
     font-style: italic;
     color: #EDE719;
-    margin: 20px 20px; }
+    margin: 20px 24px; }
   .hero .blockquote p {
     display: inline; }
   .hero .button {
@@ -152,8 +152,38 @@ ul.a {
 .card-block {
   padding: 10%; }
 
+.work {
+  background-color: #0C50BF;
+  padding: 10% 5% 10% 5%; }
+
+.workcard {
+  background-color: #0C50BF;
+  padding: 10% 5% 10% 5%;
+  margin-top: 10px; }
+
+.selection {
+  padding-top: 5%; }
+
+.user {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover; }
+
+.one {
+  background-image: url("https://media.licdn.com/mpr/mpr/shrinknp_100_100/AAEAAQAAAAAAAAhGAAAAJGFiNjdlODU1LTBkMzYtNDMzMy1hMGJiLWFlZDc4MGVkYzgxMw.jpg"); }
+
+.two {
+  background-image: url("https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAwjAAAAJDhhOTkxZDg5LWE2YTUtNGNmOC1hOGIzLTIzNmQyNzgyNGNmZQ.jpg"); }
+
+.three {
+  background-image: url("https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAldAAAAJDE5NDRkYmY3LWEzM2ItNDI2Yy05ODQ4LThlOGI3NjI5N2RhMQ.jpg"); }
+
 #adventure {
-  background-image: url("https://lh3.googleusercontent.com/aT06TNKHgPEZezNmaz172MCdh36p3s8K6rA6w6IfhIpbx7cFpH4Y1kbaFBROYqvaUtIsyaCpNmJ5JC1u0NSFMV5U_eGrY1KorgzVwS4D0wLc_yq9wVYs7uR6A4U3qXcmfSalAmpxeiCqIyd-FxlK-IH-6RLD79liVc6jIx0cVrwwI4BpF-Yt9rVkpQPZErhGObZ-BxhX_F-x9UpNvDr6VBJc7FIFElSbdkS2JuFc79dcsPyEgg7o9Pmgd-w1-PCWQvZyNjc0ar9DhUTVkBbP68JOle-tg3a6DcumiEPQemaTBjA4qe6dxgnaeyaBAseaCByG-XzydhtNWcVDPvZfPBmswAaf1vm2n4Azar7jQ7_u943mAMim9Brbtl-nNNmy1fRkk-QZ6ljStxu7y8xTYF8CcR2NiaFsXVVEH2zHTfKonYIffHYiuXYyCrVZgqyuI8jcFpZGJgxbt7hTU4rzakaS2NKLyqlTKB2VVocF44d_OQzwJFCjRoXlLOQqWcZaTuooF8TfistYx2mGegLKtOPfDZuSLSJoPdU8cZFIvZTZC0KBGJ2mhHeueEFEesLw8rfmsQSVymJthQoUH03lybZpPPqLrSa8n4ZXcuwFGsDCEypCpQ=w1702-h1276-no");
+  background-image: url("https://s3.amazonaws.com/codyiddings-2016/Opononi.JPG");
   background-color: #0C50BF;
   background-blend-mode: color-dodge;
   background-size: cover;
@@ -205,7 +235,8 @@ footer {
   .hero {
     margin-bottom: 110px;
     margin-top: 110px; }
-
+  .selection {
+    padding-top: 0; }
   footer {
     background: #dcfeff;
     width: 100%; }
@@ -229,6 +260,7 @@ footer {
       width: 20px;
       height: 20px;
       display: inline-block; } }
+
 #kiaOra.myPhoto:hover {
   transform: scale(1.1);
   transform-origin: center;
@@ -393,6 +425,7 @@ footer {
     opacity: 1;
     -webkit-transform: translate3d(0, -40%, 0);
     transform: translate3d(0, -40%, 0); } }
+
 @keyframes anim-1 {
   50% {
     opacity: 0;

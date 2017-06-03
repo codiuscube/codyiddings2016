@@ -73,9 +73,9 @@ h4 {
 }
 
 h4.attribution {
-  padding-left: 40px;
-  margin-top: -15px;
-  display: inline-block;
+  padding-left: 60px;
+  margin-top: -55px;
+  display: block;
 }
 
 p {
@@ -115,15 +115,14 @@ ul.a {
     }
   }
 
-
 .blockquote {
-  font-family: 'Tillana', cursive;
+  font-family: $karla;
   font-weight: 500;
   border-left: 2px solid $yellow;
   padding-left: 20px;
   font-style: italic;
   color: $yellow;
-  margin: 20px 20px;
+  margin: 20px 24px;
 }
  
  .blockquote p {
@@ -209,8 +208,46 @@ ul.a {
   padding: 10%;
 }
 
+
+.work {  
+  background-color: $dark-blue;
+  padding: 10% 5% 10% 5%;
+}
+
+.workcard {  
+  background-color: $dark-blue;
+  padding: 10% 5% 10% 5%;
+  margin-top: 10px;
+}
+
+  .selection {  
+  padding-top: 5%;
+}
+
+.user {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.one {
+  background-image: url('https://media.licdn.com/mpr/mpr/shrinknp_100_100/AAEAAQAAAAAAAAhGAAAAJGFiNjdlODU1LTBkMzYtNDMzMy1hMGJiLWFlZDc4MGVkYzgxMw.jpg');
+}
+
+.two {
+  background-image: url('https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAwjAAAAJDhhOTkxZDg5LWE2YTUtNGNmOC1hOGIzLTIzNmQyNzgyNGNmZQ.jpg');
+}
+
+.three {
+  background-image: url('https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAldAAAAJDE5NDRkYmY3LWEzM2ItNDI2Yy05ODQ4LThlOGI3NjI5N2RhMQ.jpg');
+}
+
 #adventure {
-  background-image: url('https://lh3.googleusercontent.com/aT06TNKHgPEZezNmaz172MCdh36p3s8K6rA6w6IfhIpbx7cFpH4Y1kbaFBROYqvaUtIsyaCpNmJ5JC1u0NSFMV5U_eGrY1KorgzVwS4D0wLc_yq9wVYs7uR6A4U3qXcmfSalAmpxeiCqIyd-FxlK-IH-6RLD79liVc6jIx0cVrwwI4BpF-Yt9rVkpQPZErhGObZ-BxhX_F-x9UpNvDr6VBJc7FIFElSbdkS2JuFc79dcsPyEgg7o9Pmgd-w1-PCWQvZyNjc0ar9DhUTVkBbP68JOle-tg3a6DcumiEPQemaTBjA4qe6dxgnaeyaBAseaCByG-XzydhtNWcVDPvZfPBmswAaf1vm2n4Azar7jQ7_u943mAMim9Brbtl-nNNmy1fRkk-QZ6ljStxu7y8xTYF8CcR2NiaFsXVVEH2zHTfKonYIffHYiuXYyCrVZgqyuI8jcFpZGJgxbt7hTU4rzakaS2NKLyqlTKB2VVocF44d_OQzwJFCjRoXlLOQqWcZaTuooF8TfistYx2mGegLKtOPfDZuSLSJoPdU8cZFIvZTZC0KBGJ2mhHeueEFEesLw8rfmsQSVymJthQoUH03lybZpPPqLrSa8n4ZXcuwFGsDCEypCpQ=w1702-h1276-no');
+  background-image: url('https://s3.amazonaws.com/codyiddings-2016/Opononi.JPG');
   background-color: $dark-blue;
   background-blend-mode: color-dodge;
   background-size: cover;
@@ -281,6 +318,10 @@ footer {
   .hero {
   margin-bottom: 110px;
   margin-top: 110px;
+}
+
+  .selection {  
+  padding-top: 0;
 }
 
   footer {
