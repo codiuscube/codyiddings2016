@@ -274,6 +274,12 @@
 		"sC": 1,
 		"tS": 0
 		},
+	"\/thanks.html": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/thanks.html",
+		"oF": 0
+		},
 	"\/tile-wide.png": {
 		"ft": 32768,
 		"iS": 140711,
