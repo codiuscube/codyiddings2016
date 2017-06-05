@@ -45,7 +45,7 @@ a {
 h1 {
   font-family: $karla;
   font-weight: 700;
-  font-size: 46px;
+  font-size: 31px;
   margin-top: 20px;
   margin-bottom: 30px;
 }
@@ -85,23 +85,53 @@ p {
   line-height: 1.5;
 }
 
-/* list style
 ul.a {
-  li {  
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
   font-family: $karla;
   font-weight: 300;
   font-size: 20px;
   line-height: 1.5;
-  margin: 0px 0px 0px -15px;
+  -moz-column-count: 2;
+  -moz-column-gap: 3%;
+  -webkit-column-count: 2;
+  -webkit-column-gap: 3%;
+  column-count: 2;
+  column-gap: 3%;
+}
+
+ul.c {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  font-family: $karla;
+  font-weight: 700;
+  font-size: 15px;
+  text-transform: uppercase;
+  overflow-x: scroll;
+  white-space: nowrap;
+  li {
+  display: inline-block;
+  &:before {
+          content: "";
+          height: 0px;
+          width: 0px;
+          padding-left: 20px;
+        }
+        &:first-child {
+          &:before {
+            content: none;
+          }
+        }
   }
 }
-*/
 
 .hero {
   background: $blue;
   color: white;
-  margin-bottom: 10px;
-  margin-top: 10px;
+  margin-bottom: 5%;
+  margin-top: 5%;
 
   a {
     color: $yellow;
@@ -114,6 +144,10 @@ ul.a {
       background: $yellow;
     }
   }
+
+.quotes {
+  padding-bottom: 5%;
+}
 
 .blockquote {
   font-family: $karla;
@@ -202,6 +236,8 @@ ul.a {
 
 .card {  
   background-color: $dark-blue;
+  margin-top: 5%;
+  margin-bottom: 5%;
 }
 
 .card-block {  
@@ -209,18 +245,26 @@ ul.a {
 }
 
 
-.work {  
+.workfirst {  
   background-color: $dark-blue;
   padding: 10% 5% 10% 5%;
 }
 
-.workcard {  
+.work {  
   background-color: $dark-blue;
   padding: 10% 5% 10% 5%;
   margin-top: 10px;
 }
 
+.worklast {  
+  background-color: $dark-blue;
+  padding: 10% 5% 10% 5%;
+  margin-top: 10px;
+  margin-bottom: 5%;
+}
+
   .selection {  
+  height: 300px;
   padding-top: 5%;
 }
 
@@ -313,7 +357,19 @@ footer {
 
 /* MEDIA QUERIES */
 
+@media (min-width: 768px) {
+    .selection {  
+  height: 300px;
+  padding-top: 0;
+  }
+}
+
+
 @media (min-width: 992px) {
+
+  h1 {
+      font-size: 52px;
+  }
 
   .hero {
   margin-bottom: 110px;
@@ -321,6 +377,11 @@ footer {
 }
 
   .selection {  
+  height: 500px;
+  padding-top: 0;
+}
+
+  .shaloha {  
   padding-top: 0;
 }
 
