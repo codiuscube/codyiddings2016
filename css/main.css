@@ -77,18 +77,7 @@ ul.c {
   font-family: "Karla", sans-serif;
   font-weight: 700;
   font-size: 15px;
-  text-transform: uppercase;
-  overflow-x: scroll;
-  white-space: nowrap; }
-  ul.c li {
-    display: inline-block; }
-    ul.c li:before {
-      content: "";
-      height: 0px;
-      width: 0px;
-      padding-left: 20px; }
-    ul.c li:first-child:before {
-      content: none; }
+  text-transform: uppercase; }
 
 .hero {
   background: #0E58D1;
@@ -269,7 +258,16 @@ footer {
 @media (min-width: 768px) {
   .selection {
     height: 300px;
-    padding-top: 0; } }
+    padding-top: 0; }
+  ul.c li {
+    display: inline-block; }
+    ul.c li:before {
+      content: "";
+      height: 0px;
+      width: 0px;
+      padding-left: 20px; }
+    ul.c li:first-child:before {
+      content: none; } }
 
 @media (min-width: 992px) {
   h1 {
@@ -456,24 +454,6 @@ footer {
   font-weight: 700;
   color: #EDE719;
   opacity: 1; }
-
-input:-webkit-autofill,
-input:-webkit-autofill:hover,
-input:-webkit-autofill:focus
-input:-webkit-autofill,
-textarea:-webkit-autofill,
-textarea:-webkit-autofill:hover
-textarea:-webkit-autofill:focus,
-select:-webkit-autofill,
-select:-webkit-autofill:hover,
-select:-webkit-autofill:focus {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: calc(100%);
-  border-bottom: 1px solid #B9C1CA; }
 
 @-webkit-keyframes anim-1 {
   50% {

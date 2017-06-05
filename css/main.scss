@@ -109,22 +109,6 @@ ul.c {
   font-weight: 700;
   font-size: 15px;
   text-transform: uppercase;
-  overflow-x: scroll;
-  white-space: nowrap;
-  li {
-  display: inline-block;
-  &:before {
-          content: "";
-          height: 0px;
-          width: 0px;
-          padding-left: 20px;
-        }
-        &:first-child {
-          &:before {
-            content: none;
-          }
-        }
-  }
 }
 
 .hero {
@@ -362,6 +346,23 @@ footer {
   height: 300px;
   padding-top: 0;
   }
+
+  ul.c {
+  li {
+  display: inline-block;
+  &:before {
+          content: "";
+          height: 0px;
+          width: 0px;
+          padding-left: 20px;
+        }
+        &:first-child {
+          &:before {
+            content: none;
+          }
+        }
+  }
+}
 }
 
 
@@ -609,25 +610,6 @@ footer {
   font-weight: 700;
   color: $yellow;
   opacity: 1;
-}
-
-input:-webkit-autofill,
-input:-webkit-autofill:hover, 
-input:-webkit-autofill:focus
-input:-webkit-autofill, 
-textarea:-webkit-autofill,
-textarea:-webkit-autofill:hover
-textarea:-webkit-autofill:focus,
-select:-webkit-autofill,
-select:-webkit-autofill:hover,
-select:-webkit-autofill:focus {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: calc(100%);
-  border-bottom: 1px solid #B9C1CA;
 }
 
 @-webkit-keyframes anim-1 {
