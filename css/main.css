@@ -160,7 +160,11 @@ ul.c {
     display: block;
     margin: 10px;
     margin-bottom: -8px;
+<<<<<<< HEAD
     margin-top: 10%; }
+=======
+    margin-top: 5%; }
+>>>>>>> master
 
 .card {
   background-color: #0C50BF;
@@ -188,7 +192,11 @@ ul.c {
   height: 300px;
   padding-top: 5%; }
 
+<<<<<<< HEAD
 .display {
+=======
+.shaloha2 {
+>>>>>>> master
   display: none; }
 
 .user {
@@ -280,7 +288,11 @@ footer {
     padding-top: 0; }
   .shaloha {
     padding-top: 0; }
+<<<<<<< HEAD
   .display {
+=======
+  .shaloha2 {
+>>>>>>> master
     padding-top: 0;
     display: block; }
   footer {

@@ -109,7 +109,11 @@ ul.c {
   font-weight: 700;
   font-size: 15px;
   text-transform: uppercase;
+<<<<<<< HEAD
     }
+=======
+}
+>>>>>>> master
 
 .hero {
   background: $blue;
@@ -215,7 +219,11 @@ ul.c {
     display: block;
     margin: 10px;
     margin-bottom: -8px;
+<<<<<<< HEAD
     margin-top: 10%;
+=======
+    margin-top: 5%;
+>>>>>>> master
   }
 }
 
@@ -253,7 +261,11 @@ ul.c {
   padding-top: 5%;
 }
 
+<<<<<<< HEAD
   .display {  
+=======
+  .shaloha2 {  
+>>>>>>> master
   display: none;
 }
 
@@ -367,8 +379,13 @@ footer {
             content: none;
           }
         }
+<<<<<<< HEAD
       }
     }
+=======
+  }
+}
+>>>>>>> master
 }
 
 
@@ -385,6 +402,10 @@ footer {
 
   .shaloha {  
   padding-top: 0;
+}
+  .shaloha2 {  
+  padding-top: 0;
+  display: block;
 }
 
     .display {  
@@ -500,6 +521,7 @@ footer {
   font-family: $karla;
   -webkit-appearance: none; /* for box shadows to show on iOS */
 }
+
 
 .input__field:focus {
   outline: none;
