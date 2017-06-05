@@ -170,6 +170,19 @@
 		"oF": 0,
 		"oS": 0
 		},
+	"\/css\/main.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/css\/main.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
 	"\/css\/main.textClipping": {
 		"ft": 8192,
 		"oA": 2,
@@ -190,6 +203,12 @@
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/favicon.ico",
+		"oF": 0
+		},
+	"\/index.html": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/index.html",
 		"oF": 0
 		},
 	"\/js\/classie.js": {

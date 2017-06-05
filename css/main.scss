@@ -109,29 +109,13 @@ ul.c {
   font-weight: 700;
   font-size: 15px;
   text-transform: uppercase;
-  overflow-x: scroll;
-  white-space: nowrap;
-  li {
-  display: inline-block;
-  &:before {
-          content: "";
-          height: 0px;
-          width: 0px;
-          padding-left: 20px;
-        }
-        &:first-child {
-          &:before {
-            content: none;
-          }
-        }
-  }
-}
+    }
 
 .hero {
   background: $blue;
   color: white;
-  margin-bottom: 5%;
   margin-top: 5%;
+  margin-bottom: 5%;
 
   a {
     color: $yellow;
@@ -231,13 +215,14 @@ ul.c {
     display: block;
     margin: 10px;
     margin-bottom: -8px;
+    margin-top: 10%;
   }
 }
+
 
 .card {  
   background-color: $dark-blue;
   margin-top: 5%;
-  margin-bottom: 5%;
 }
 
 .card-block {  
@@ -266,6 +251,10 @@ ul.c {
   .selection {  
   height: 300px;
   padding-top: 5%;
+}
+
+  .display {  
+  display: none;
 }
 
 .user {
@@ -358,10 +347,28 @@ footer {
 /* MEDIA QUERIES */
 
 @media (min-width: 768px) {
-    .selection {  
+  
+  .selection {  
   height: 300px;
   padding-top: 0;
   }
+
+  ul.c {
+  li {
+  display: inline-block;
+  &:before {
+          content: "";
+          height: 0px;
+          width: 0px;
+          padding-left: 20px;
+        }
+        &:first-child {
+          &:before {
+            content: none;
+          }
+        }
+      }
+    }
 }
 
 
@@ -371,11 +378,6 @@ footer {
       font-size: 52px;
   }
 
-  .hero {
-  margin-bottom: 110px;
-  margin-top: 110px;
-}
-
   .selection {  
   height: 500px;
   padding-top: 0;
@@ -383,6 +385,11 @@ footer {
 
   .shaloha {  
   padding-top: 0;
+}
+
+    .display {  
+  padding-top: 0;
+  display: block;
 }
 
   footer {
