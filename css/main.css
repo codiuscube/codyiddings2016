@@ -159,7 +159,8 @@ ul.c {
   .hero .icon-skills {
     display: block;
     margin: 10px;
-    margin-bottom: -8px; }
+    margin-bottom: -8px;
+    margin-top: 5%; }
 
 .card {
   background-color: #0C50BF;
@@ -187,6 +188,9 @@ ul.c {
 .selection {
   height: 300px;
   padding-top: 5%; }
+
+.shaloha2 {
+  display: none; }
 
 .user {
   display: inline-block;
@@ -280,6 +284,9 @@ footer {
     padding-top: 0; }
   .shaloha {
     padding-top: 0; }
+  .shaloha2 {
+    padding-top: 0;
+    display: block; }
   footer {
     background: #dcfeff;
     width: 100%; }

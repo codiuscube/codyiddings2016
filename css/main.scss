@@ -215,6 +215,7 @@ ul.c {
     display: block;
     margin: 10px;
     margin-bottom: -8px;
+    margin-top: 5%;
   }
 }
 
@@ -250,6 +251,10 @@ ul.c {
   .selection {  
   height: 300px;
   padding-top: 5%;
+}
+
+  .shaloha2 {  
+  display: none;
 }
 
 .user {
@@ -384,6 +389,10 @@ footer {
 
   .shaloha {  
   padding-top: 0;
+}
+  .shaloha2 {  
+  padding-top: 0;
+  display: block;
 }
 
   footer {
