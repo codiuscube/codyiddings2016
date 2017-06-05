@@ -38,6 +38,12 @@
 		"oAP": "\/browserconfig.xml",
 		"oF": 0
 		},
+	"\/CodyIddings-Resume-2017.pdf": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/CodyIddings-Resume-2017.pdf",
+		"oF": 0
+		},
 	"\/css\/.sass-cache\/0910141b7eb7b8270d9fbed212b6a4ac511001bb\/main.scssc": {
 		"ft": 8192,
 		"oA": 2,
@@ -164,19 +170,6 @@
 		"oF": 0,
 		"oS": 0
 		},
-	"\/css\/main.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/css\/main.css",
-		"oF": 0,
-		"oS": 0,
-		"uL": 1
-		},
 	"\/css\/main.textClipping": {
 		"ft": 8192,
 		"oA": 2,
@@ -197,12 +190,6 @@
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/favicon.ico",
-		"oF": 0
-		},
-	"\/index.html": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/index.html",
 		"oF": 0
 		},
 	"\/js\/classie.js": {
