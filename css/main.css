@@ -21,7 +21,7 @@ a {
 h1 {
   font-family: "Karla", sans-serif;
   font-weight: 700;
-  font-size: 46px;
+  font-size: 31px;
   margin-top: 20px;
   margin-bottom: 30px; }
 
@@ -55,22 +55,46 @@ p {
   font-size: 20px;
   line-height: 1.5; }
 
-/* list style
 ul.a {
-  li {  
-  font-family: $karla;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  font-family: "Karla", sans-serif;
   font-weight: 300;
   font-size: 20px;
   line-height: 1.5;
-  margin: 0px 0px 0px -15px;
-  }
-}
-*/
+  -moz-column-count: 2;
+  -moz-column-gap: 3%;
+  -webkit-column-count: 2;
+  -webkit-column-gap: 3%;
+  column-count: 2;
+  column-gap: 3%; }
+
+ul.c {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  font-family: "Karla", sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  text-transform: uppercase;
+  overflow-x: scroll;
+  white-space: nowrap; }
+  ul.c li {
+    display: inline-block; }
+    ul.c li:before {
+      content: "";
+      height: 0px;
+      width: 0px;
+      padding-left: 20px; }
+    ul.c li:first-child:before {
+      content: none; }
+
 .hero {
   background: #0E58D1;
   color: white;
-  margin-bottom: 10px;
-  margin-top: 10px; }
+  margin-bottom: 5%;
+  margin-top: 5%; }
   .hero a {
     color: #EDE719; }
     .hero a:visited {
@@ -78,6 +102,8 @@ ul.a {
     .hero a:hover {
       color: #0E58D1;
       background: #EDE719; }
+  .hero .quotes {
+    padding-bottom: 5%; }
   .hero .blockquote {
     font-family: "Karla", sans-serif;
     font-weight: 500;
@@ -147,21 +173,30 @@ ul.a {
     margin-bottom: -8px; }
 
 .card {
-  background-color: #0C50BF; }
+  background-color: #0C50BF;
+  margin-top: 5%;
+  margin-bottom: 5%; }
 
 .card-block {
   padding: 10%; }
 
-.work {
+.workfirst {
   background-color: #0C50BF;
   padding: 10% 5% 10% 5%; }
 
-.workcard {
+.work {
   background-color: #0C50BF;
   padding: 10% 5% 10% 5%;
   margin-top: 10px; }
 
+.worklast {
+  background-color: #0C50BF;
+  padding: 10% 5% 10% 5%;
+  margin-top: 10px;
+  margin-bottom: 5%; }
+
 .selection {
+  height: 300px;
   padding-top: 5%; }
 
 .user {
@@ -231,11 +266,21 @@ footer {
     display: none; }
 
 /* MEDIA QUERIES */
+@media (min-width: 768px) {
+  .selection {
+    height: 300px;
+    padding-top: 0; } }
+
 @media (min-width: 992px) {
+  h1 {
+    font-size: 52px; }
   .hero {
     margin-bottom: 110px;
     margin-top: 110px; }
   .selection {
+    height: 500px;
+    padding-top: 0; }
+  .shaloha {
     padding-top: 0; }
   footer {
     background: #dcfeff;
