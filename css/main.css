@@ -27,7 +27,8 @@ h1 {
 h2 {
   font-family: "Karla", sans-serif;
   font-weight: 700;
-  font-size: 31px; }
+  font-size: 31px;
+  margin-bottom: 20px;}
 
 h3 {
   font-family: "Karla", sans-serif;
