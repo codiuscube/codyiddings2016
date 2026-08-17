@@ -1,1 +1,5 @@
 .DS_Store
+
+# Client proposals are written and rendered locally, then sent as PDFs.
+# This repo is public — nothing in here should ever be committed or published.
+proposals/
