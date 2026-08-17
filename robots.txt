@@ -1,0 +1,54 @@
+# codyiddings.com
+# Everything here is public and meant to be found, indexed, and cited.
+
+User-agent: *
+Allow: /
+
+# --- AI / answer-engine crawlers -------------------------------------------
+# Explicitly allowed. These are allowed by default anyway, but stating it means
+# a future crawler-blocking default (or a host that adds one) can't silently
+# drop this site out of AI answers. Delete a block to opt that crawler out.
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+User-agent: Meta-ExternalAgent
+Allow: /
+
+Sitemap: https://codyiddings.com/sitemap.xml

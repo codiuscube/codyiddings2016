@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://codyiddings.com/</loc>
+    <lastmod>2026-08-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://codyiddings.com/img/cody-iddings-family-900.webp</image:loc>
+      <image:title>Cody Iddings</image:title>
+      <image:caption>Cody Iddings with his wife and three children.</image:caption>
+    </image:image>
+  </url>
+</urlset>
