@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="googlebot" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<title>Cody's 40th 🌊 El Salvador</title>
+<meta name="description" content="You're invited: a week of warm water and right-hand points in El Salvador.">
+<meta property="og:title" content="🌊 Cody's 40th Birthday Surf Trip! 🏄‍♂️">
+<meta property="og:description" content="A week of warm water, right-hand points, and good times in El Salvador. RSVP by Dec 1.">
+<meta property="og:image" content="https://codyiddings.com/40/img/og.jpg">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#fbf1df">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🥭</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="img/mango-900.jpg">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body class="eating">
+
+<!-- ============ Opening: eat the mango ============ -->
+<section class="intro" id="intro" aria-label="Opening">
+  <div class="mango-stage" id="stage">
+    <button class="mango-btn" id="mango" type="button" aria-label="Take a bite of the mango">
+      <svg class="mango" viewBox="0 0 300 380" aria-hidden="true">
+        <defs>
+          <filter id="rough" x="-10%" y="-10%" width="120%" height="120%">
+            <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="7" result="n"/>
+            <feDisplacementMap in="SourceGraphic" in2="n" scale="5" xChannelSelector="R" yChannelSelector="G"/>
+          </filter>
+          <linearGradient id="skin" x1="0.85" y1="0.05" x2="0.2" y2="1">
+            <stop offset="0" stop-color="#f2453a"/>
+            <stop offset="0.35" stop-color="#ff8a2a"/>
+            <stop offset="0.7" stop-color="#ffc23a"/>
+            <stop offset="1" stop-color="#b9cf45"/>
+          </linearGradient>
+          <linearGradient id="flesh" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#ffd35a"/>
+            <stop offset="1" stop-color="#ffab2e"/>
+          </linearGradient>
+          <mask id="skinMask" maskUnits="userSpaceOnUse" x="0" y="0" width="300" height="380">
+            <rect width="300" height="380" fill="#fff"/>
+            <g id="skinBites" fill="#000"></g>
+          </mask>
+          <mask id="fleshMask" maskUnits="userSpaceOnUse" x="0" y="0" width="300" height="380">
+            <rect width="300" height="380" fill="#fff"/>
+            <g id="fleshBites" fill="#000"></g>
+          </mask>
+          <path id="mangoShape" d="M152 52 C232 50 266 140 262 226 C258 314 206 362 146 362 C86 362 40 314 40 234 C40 146 84 54 152 52 Z"/>
+        </defs>
+        <g filter="url(#rough)">
+          <!-- stem -->
+          <path d="M150 20 C152 40 150 60 150 90" stroke="#6b4a2b" stroke-width="9" stroke-linecap="round" fill="none"/>
+          <!-- the core, always there underneath -->
+          <g class="core">
+            <path d="M150 76 C186 80 198 150 196 212 C194 280 176 326 150 328 C124 326 106 280 104 212 C102 150 114 80 150 76 Z" fill="#f6dc86"/>
+            <path d="M150 92 C176 96 184 150 182 212 C180 270 168 308 150 310 C132 308 120 270 118 212 C116 150 124 96 150 92 Z" fill="#efc95e"/>
+            <g stroke="#e0ad45" stroke-width="2.5" stroke-linecap="round" fill="none" opacity=".8">
+              <path d="M132 130 l-10 -6 M168 130 l10 -6 M128 180 l-12 -2 M172 180 l12 -2 M128 240 l-12 4 M172 240 l12 4 M136 290 l-8 8 M164 290 l8 8"/>
+            </g>
+            <g class="core-face">
+              <path d="M134 196 q6 -7 12 0 M156 196 q6 -7 12 0" stroke="#3a2a35" stroke-width="4" stroke-linecap="round" fill="none"/>
+              <path d="M138 214 q13 12 26 0" stroke="#3a2a35" stroke-width="4" stroke-linecap="round" fill="none"/>
+            </g>
+          </g>
+          <!-- flesh, shows as a yellow rim inside each bite -->
+          <g class="flesh" mask="url(#fleshMask)">
+            <use href="#mangoShape" fill="url(#flesh)"/>
+          </g>
+          <!-- skin + face -->
+          <g class="skin" mask="url(#skinMask)">
+            <use href="#mangoShape" fill="url(#skin)"/>
+            <path d="M92 120 C104 90 126 76 146 74 C122 92 108 112 102 138 Z" fill="#fff" opacity=".35"/>
+            <g class="face">
+              <ellipse class="eye" cx="126" cy="186" rx="8" ry="11" fill="#2b2033"/>
+              <ellipse class="eye" cx="176" cy="186" rx="8" ry="11" fill="#2b2033"/>
+              <circle cx="129" cy="182" r="3" fill="#fff"/>
+              <circle cx="179" cy="182" r="3" fill="#fff"/>
+              <ellipse cx="108" cy="214" rx="11" ry="7" fill="#ff6f7d" opacity=".55"/>
+              <ellipse cx="194" cy="214" rx="11" ry="7" fill="#ff6f7d" opacity=".55"/>
+              <path class="mouth" d="M132 208 Q151 236 170 208 Z" fill="#7a1f2b"/>
+            </g>
+          </g>
+          <!-- leaf -->
+          <path class="leaf" d="M152 50 C170 18 214 10 238 22 C222 50 186 64 152 50 Z" fill="#46a64a"/>
+          <path d="M156 48 C180 36 206 28 230 24" stroke="#2f7d36" stroke-width="3" fill="none" stroke-linecap="round"/>
+        </g>
+      </svg>
+    </button>
+    <div class="fx" id="fx" aria-hidden="true"></div>
+  </div>
+</section>
+
+<!-- ============ The invite ============ -->
+<main class="invite" id="invite" aria-hidden="true">
+  <header class="hero">
+    <picture>
+      <source media="(min-width: 900px)" srcset="img/mango-1600.jpg">
+      <img src="img/mango-900.jpg" alt="Paper-cutout mango surfing a right-hand point, with palm trees and a sunset" width="1600" height="893">
+    </picture>
+    <svg class="hero-tear" viewBox="0 0 1200 60" preserveAspectRatio="none" aria-hidden="true"><path fill="#fbf1df" d=""/></svg>
+  </header>
+
+  <div class="wrap">
+    <section class="paper title-card reveal" style="--c:var(--sun);--tilt:-1.2deg">
+      <h1>🌊 Cody's 40th Birthday Surf Trip! 🏄‍♂️</h1>
+      <p class="lead">I'm turning 40, and we're celebrating with a week of warm water, right-hand points, and good times in El Salvador.</p>
+    </section>
+
+    <section class="facts" aria-label="The details">
+      <article class="paper fact reveal" style="--c:var(--teal);--tilt:1.4deg">
+        <span class="fact-icon" aria-hidden="true">📍</span>
+        <h2>Where:</h2>
+        <p>Airbnb at Punta Mango (fly into San Salvador - SAL, about a 3-hour drive from the airport)</p>
+      </article>
+      <article class="paper fact reveal" style="--c:var(--coral);--tilt:-1.6deg">
+        <span class="fact-icon" aria-hidden="true">🗓️</span>
+        <h2>When:</h2>
+        <p>Mid-April to Mid-May (aiming for about a week)</p>
+      </article>
+      <article class="paper fact reveal" style="--c:var(--leaf);--tilt:1deg">
+        <span class="fact-icon" aria-hidden="true">🤝</span>
+        <h2>The deal:</h2>
+        <p>Your stay is completely covered! 🏠</p>
+      </article>
+    </section>
+
+    <section class="paper list-card reveal" style="--c:var(--cream);--tilt:-.8deg">
+      <h2>Cost breakdown:</h2>
+      <ul class="cost-list">
+        <li><span class="li-icon" aria-hidden="true">✈️</span><span><b>Flights:</b> Around $500 round-trip into SAL</span></li>
+        <li><span class="li-icon" aria-hidden="true">🚙</span><span><b>Rental car/transport:</b> Very cheap (I'll rent a vehicle; we'll add a second if the crew is big)</span></li>
+        <li><span class="li-icon" aria-hidden="true">🌮</span><span><b>Food &amp; drinks:</b> Uses USD, slightly cheaper than back home</span></li>
+      </ul>
+    </section>
+
+    <section class="paper list-card expect reveal" style="--c:var(--sea);--tilt:1.1deg">
+      <h2>What to expect:</h2>
+      <ul class="expect-list">
+        <li><span class="li-icon" aria-hidden="true">🏄</span>All-day surf sessions</li>
+        <li><span class="li-icon" aria-hidden="true">🌊</span>Right-hand point breaks from Punta Mango to Las Flores</li>
+        <li><span class="li-icon" aria-hidden="true">🥥</span>Fresh coconuts, smoothies, and epic food</li>
+      </ul>
+    </section>
+
+    <section class="paper reveal" style="--c:var(--pink);--tilt:-1.3deg">
+      <h2>Next steps &amp; quick logistics:</h2>
+      <p>I need a solid headcount so I can lock down the house and the exact week. Please RSVP by December 1st and let me know if there are specific dates between mid-April and mid-May that you definitely can't make.</p>
+      <p class="countdown" id="countdown" hidden></p>
+      <p class="score-line">Let's go score! 🤙</p>
+    </section>
+
+    <section class="paper rsvp reveal" id="rsvp" style="--c:var(--cream);--tilt:.6deg" aria-labelledby="rsvp-title">
+      <h2 id="rsvp-title">RSVP</h2>
+      <form id="rsvp-form" novalidate>
+        <label class="field">
+          <span>Your name</span>
+          <input name="name" id="name" type="text" autocomplete="name" required maxlength="80" placeholder="First and last">
+        </label>
+        <fieldset class="choice">
+          <legend>Are you coming?</legend>
+          <label><input type="radio" name="attending" value="yes" required><span>I'm in! 🤙</span></label>
+          <label><input type="radio" name="attending" value="no"><span>Can't make it 😢</span></label>
+        </fieldset>
+        <fieldset class="weeks" id="weeks" hidden>
+          <legend>Any weeks you definitely can't make? <small>(tap all that apply)</small></legend>
+          <div class="chips">
+            <label><input type="checkbox" name="weeks" value="Apr 10–17"><span>Apr 10–17</span></label>
+            <label><input type="checkbox" name="weeks" value="Apr 17–24"><span>Apr 17–24</span></label>
+            <label><input type="checkbox" name="weeks" value="Apr 24–May 1"><span>Apr 24–May 1</span></label>
+            <label><input type="checkbox" name="weeks" value="May 1–8"><span>May 1–8</span></label>
+            <label><input type="checkbox" name="weeks" value="May 8–15"><span>May 8–15</span></label>
+            <label><input type="checkbox" name="weeks" value="May 15–22"><span>May 15–22</span></label>
+          </div>
+        </fieldset>
+        <label class="field" id="other-field" hidden>
+          <span id="other-label">Other dates you can't make, or anything else</span>
+          <textarea name="other" id="other" rows="2" maxlength="500" placeholder="e.g. not before Apr 20"></textarea>
+        </label>
+        <label class="hp" aria-hidden="true">Company <input name="company" tabindex="-1" autocomplete="off"></label>
+        <button class="send" type="submit">Send my RSVP</button>
+        <p class="form-msg" id="form-msg" role="status" aria-live="polite"></p>
+      </form>
+      <div class="thanks" id="thanks" hidden tabindex="-1">
+        <p class="thanks-big" id="thanks-big"></p>
+        <p id="thanks-small"></p>
+        <p class="test-note" id="test-note" hidden>Test mode: no RSVP endpoint is set, so this wasn't saved.</p>
+        <button type="button" class="again" id="again">Change my answer</button>
+      </div>
+    </section>
+  </div>
+
+</main>
+
+
+<script src="config.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
