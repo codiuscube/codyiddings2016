@@ -234,8 +234,20 @@
     sendBtn.disabled = true; sendBtn.textContent = "Sending…";
     try {
       if (endpoint) {
-        // text/plain + no-cors = no preflight, which is what a Google Apps Script web app needs.
-        await fetch(endpoint, { method: "POST", mode: "no-cors", headers: { "Content-Type": "text/plain;charset=utf-8" }, body: JSON.stringify(data) });
+        // sendBeacon hands the POST to the browser and returns at once: it never waits on
+        // Google's redirect, which could hang on phones and leave the button on "Sending…".
+        // text/plain = no preflight, which is what a Google Apps Script web app needs.
+        const body = JSON.stringify(data);
+        const queued = navigator.sendBeacon && navigator.sendBeacon(endpoint, new Blob([body], { type: "text/plain;charset=utf-8" }));
+        if (!queued) {
+          // Fallback: fetch, but never wait more than 8 seconds for Google's reply.
+          const ctl = new AbortController(); const timer = setTimeout(() => ctl.abort(), 8000);
+          try {
+            await fetch(endpoint, { method: "POST", mode: "no-cors", keepalive: true, signal: ctl.signal, headers: { "Content-Type": "text/plain;charset=utf-8" }, body });
+          } catch (err) {
+            if (err.name !== "AbortError") throw err; // a timeout: the POST has usually landed already
+          } finally { clearTimeout(timer); }
+        }
       } else {
         console.warn("RSVP_ENDPOINT is empty (config.js): test mode, nothing saved.", data);
       }
