@@ -191,7 +191,7 @@
     weeks.hidden = !yes;
     other.hidden = false;
     $("#other-label").textContent = yes ? "Other dates you can't make, or anything else" : "Anything you want to tell me?";
-    $("#other").placeholder = yes ? "e.g. not before Apr 20" : "Optional";
+    $("#other").placeholder = yes ? "e.g. can't fly out until Apr 29" : "Optional";
   });
 
   function confetti() {
