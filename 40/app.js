@@ -271,4 +271,25 @@
     if (yes) confetti();
   }
   $("#again").addEventListener("click", () => { thanks.hidden = true; form.hidden = false; $("#name").focus(); });
+  /* ---------- house photo carousel ---------- */
+  (function () {
+    const track = document.getElementById("track");
+    if (!track) return;
+    const slides = [...track.children], dotsEl = document.getElementById("car-dots");
+    const prev = document.querySelector(".nav.prev"), next = document.querySelector(".nav.next");
+    slides.forEach(() => dotsEl.appendChild(document.createElement("i")));
+    const at = () => Math.round(track.scrollLeft / (slides[0].offsetWidth + 10));
+    const go = (i) => track.scrollTo({ left: Math.max(0, Math.min(slides.length - 1, i)) * (slides[0].offsetWidth + 10) });
+    function sync() {
+      const i = at();
+      [...dotsEl.children].forEach((d, k) => d.classList.toggle("on", k === i));
+      prev.disabled = i <= 0; next.disabled = i >= slides.length - 1;
+    }
+    prev.addEventListener("click", () => go(at() - 1));
+    next.addEventListener("click", () => go(at() + 1));
+    track.addEventListener("keydown", (e) => { if (e.key === "ArrowLeft") go(at() - 1); if (e.key === "ArrowRight") go(at() + 1); });
+    track.addEventListener("scroll", () => requestAnimationFrame(sync), { passive: true });
+    window.addEventListener("resize", sync);
+    sync();
+  })();
 })();

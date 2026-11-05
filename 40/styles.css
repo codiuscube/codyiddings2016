@@ -227,3 +227,30 @@ legend small { font-weight: 400; opacity: .75; }
 [hidden] { display: none !important; }
 
 .score-line { margin: 14px 0 0; font: 400 26px/1.1 var(--display); color: var(--ink, #23264a); }
+
+/* ============ House carousel ============ */
+.house { color: #fff; }
+.house h2 { color: #fff; }
+.house-sub { margin: -4px 0 14px; font-weight: 500; opacity: .92; }
+.carousel { position: relative; margin: 0 -6px; }
+.track {
+  list-style: none; margin: 0; padding: 0; display: flex; gap: 10px;
+  overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch; scrollbar-width: none; border-radius: 10px;
+}
+.track::-webkit-scrollbar { display: none; }
+.track:focus-visible { outline: 3px dashed #fff; outline-offset: 4px; }
+.slide { flex: 0 0 100%; scroll-snap-align: center; aspect-ratio: 4 / 3; border-radius: 10px; overflow: hidden; background: rgba(255,255,255,.15); border: 4px solid #fff; box-sizing: border-box; }
+.slide img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.nav {
+  position: absolute; top: 50%; transform: translateY(-50%); width: 44px; height: 44px; border-radius: 50%;
+  border: 3px solid var(--ink); background: var(--sun, #ffc94a); color: var(--ink);
+  font: 400 30px/1 var(--display); display: grid; place-items: center; padding: 0 0 4px; cursor: pointer;
+  box-shadow: 0 3px 0 rgba(35,38,74,.35);
+}
+.nav.prev { left: 10px; } .nav.next { right: 10px; }
+.nav:disabled { opacity: 0; pointer-events: none; }
+.car-dots { display: flex; justify-content: center; gap: 8px; margin-top: 12px; }
+.car-dots i { width: 9px; height: 9px; border-radius: 50%; background: rgba(255,255,255,.45); transition: background .2s, transform .2s; }
+.car-dots i.on { background: #fff; transform: scale(1.3); }
+@media (hover: none) { .nav { display: none; } }
