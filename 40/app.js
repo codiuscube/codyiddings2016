@@ -191,7 +191,7 @@
     weeks.hidden = !yes;
     other.hidden = false;
     $("#other-label").textContent = yes ? "Other dates you can't make, or anything else" : "Anything you want to tell me?";
-    $("#other").placeholder = yes ? "e.g. can't fly out until Apr 29" : "Optional";
+    $("#other").placeholder = yes ? "e.g. can't fly out until Apr 24" : "Optional";
   });
 
   function confetti() {
@@ -264,7 +264,7 @@
     const yes = d.attending === "yes";
     $("#thanks-big").textContent = yes ? `You're in, ${first}! 🤙` : `Bummer, ${first}! 🧡`;
     $("#thanks-small").textContent = yes
-      ? "Got it. I'll lock down the house and the exact week once the headcount's in."
+      ? "Got it. I'll lock down the house and the exact dates once the headcount's in."
       : "Thanks for letting me know. You'll be missed out there.";
     $("#test-note").hidden = !testMode;
     form.hidden = true; thanks.hidden = false; thanks.focus();
