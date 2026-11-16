@@ -882,10 +882,13 @@
           h('button', { class: 'btn primary', type: 'button', text: 'Download .txt', onclick: function () { download(stamp() + '.txt', asTxt()); App.toast('Saved ' + stamp() + '.txt'); } }),
           h('button', { class: 'btn', type: 'button', text: 'Download .md', onclick: function () { download(stamp() + '.md', asMd(), 'text/markdown;charset=utf-8'); App.toast('Saved ' + stamp() + '.md'); } }),
           h('button', { class: 'btn', type: 'button', text: 'Copy', onclick: function () { copyText(asTxt()).then(function () { App.toast('Copied the poem.'); }); } }),
+          h('button', { class: 'btn', type: 'button', text: 'PDF (one page)', title: 'A styled single page. In the print window, choose Save as PDF', onclick: function () { printPdf(); } }),
           h('button', { class: 'btn', type: 'button', text: 'Print for the lectern', title: 'The poem alone, in large type', onclick: function () {
+            document.body.classList.remove('pdf-print');
             $('print-sheet').textContent = asTxt();
             setTimeout(function () { window.print(); }, 50);
-          } }))));
+          } }))),
+        h('p', { class: 'muted small', style: 'margin:.6rem 0 0', text: 'PDF: the print window opens; set Destination to “Save as PDF”.' }));
       root.appendChild(h('div', { class: 'p-sec' },
         h('p', { class: 'p-label', text: 'Keep a safe copy of everything' }),
         h('p', { class: 'muted small', style: 'margin:0 0 .6rem', text: 'Your poem is saved in this browser as you write. Another browser, or opening this page from a different address, has its own separate copy. A backup carries the poem, your snapshots and settings between them.' }),
@@ -894,6 +897,85 @@
           h('button', { class: 'btn', type: 'button', text: 'Open a file…', title: 'A .txt or .md poem, or a backup .json', onclick: function () { fileInput.click(); } }),
           fileInput)));
       paintSummary();
+    }
+
+    /* ---------- one-page PDF ---------- */
+    var PAGE_H_IN = 11 - 1.2;   // @page onepage: 11in less the top and bottom margins
+    var REFRAIN = /^could you imagine that/i;
+
+    /** Stanzas of the poem as exported (private notes follow the checkbox). */
+    function stanzas() {
+      var out = [], cur = [];
+      poemText().replace(/\s+$/, '').split('\n').forEach(function (l) {
+        if (l.trim() === '') { if (cur.length) out.push(cur); cur = []; } else cur.push(l);
+      });
+      if (cur.length) out.push(cur);
+      // keep a lone refrain line with the stanza it introduces
+      for (var i = out.length - 2; i >= 0; i--) {
+        if (out[i].length === 1 && REFRAIN.test(out[i][0].trim())) { out[i + 1] = out[i].concat([''], out[i + 1]); out.splice(i, 1); }
+      }
+      return out;
+    }
+
+    function buildPdfSheet() {
+      var sheet = $('pdf-sheet');
+      sheet.textContent = '';
+      var week = WEEK;
+      sheet.appendChild(h('header', { class: 'pdf-head' },
+        h('p', { class: 'pdf-kicker', text: week ? 'Advent · ' + week.label + ' · ' + week.who + ': ' + week.theme : 'Advent' }),
+        h('h1', { class: 'pdf-title', text: titleLine() || 'Could You Imagine That' }),
+        h('hr', { class: 'pdf-rule' }),
+        h('p', { class: 'pdf-by', text: 'Cody Iddings · after Matthew 1:18–25' })));
+      var body = h('div', { class: 'pdf-body' });
+      stanzas().forEach(function (st) {
+        body.appendChild(h('div', { class: 'pdf-stanza' }, st.map(function (l) {
+          return h('div', { class: 'pdf-line' + (REFRAIN.test(l.trim()) ? ' refrain' : ''), text: l === '' ? '\u00a0' : l });
+        })));
+      });
+      sheet.appendChild(body);
+      sheet.appendChild(h('footer', { class: 'pdf-foot', text: 'Christmas Through Their Eyes · Advent ' + new Date().getFullYear() }));
+      return { sheet: sheet, body: body };
+    }
+
+    /** A poem line must never wrap: any line taller than one line of type fails the fit. */
+    function wraps(sheet) {
+      var lines = sheet.querySelectorAll('.pdf-line');
+      var one = parseFloat(getComputedStyle(lines[0] || sheet).lineHeight) || 0;
+      for (var i = 0; i < lines.length; i++) if (lines[i].getBoundingClientRect().height > one * 1.5) return true;
+      return false;
+    }
+
+    /** Largest type, one column if it fits there, else two, so the sheet is one page
+        and no line wraps. */
+    function fitPdfSheet(parts) {
+      var sheet = parts.sheet, body = parts.body;
+      var pageH = PAGE_H_IN * 96;
+      sheet.classList.add('measuring');
+      var pick = null;
+      [[1, 14, 11], [2, 13, 7]].some(function (plan) {
+        body.classList.toggle('two', plan[0] === 2);
+        for (var pt = plan[1]; pt >= plan[2]; pt -= 0.25) {
+          sheet.style.setProperty('--pdf-size', pt + 'pt');
+          if (sheet.scrollHeight <= pageH && !wraps(sheet)) { pick = { columns: plan[0], pt: pt }; return true; }
+        }
+        return false;
+      });
+      if (!pick) pick = { columns: 2, pt: 7 };
+      sheet.classList.remove('measuring');
+      sheet.dataset.columns = String(pick.columns);
+      sheet.dataset.pt = String(pick.pt);
+      return pick;
+    }
+
+    function printPdf() {
+      var pick = fitPdfSheet(buildPdfSheet());
+      document.body.classList.add('pdf-print');
+      var was = document.title;
+      document.title = stamp();   // becomes the PDF's file name
+      function done() { document.body.classList.remove('pdf-print'); document.title = was; window.removeEventListener('afterprint', done); }
+      window.addEventListener('afterprint', done);
+      App.toast('One page, ' + (pick.columns === 2 ? 'two columns' : 'one column') + ' at ' + pick.pt + 'pt. Choose “Save as PDF”.');
+      setTimeout(function () { window.print(); }, 50);
     }
 
     function importFile(file) {
@@ -912,6 +994,7 @@
 
     return {
       title: 'Export',
+      buildPdf: function () { return fitPdfSheet(buildPdfSheet()); },
       open: function (arg, fresh, r) { root = r; paint(); },
       refresh: function () { if (summary) paintSummary(); },
     };
