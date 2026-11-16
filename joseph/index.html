@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en" data-theme="paper">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Could you imagine that— · Joseph</title>
+<meta name="color-scheme" content="light dark">
+<meta name="description" content="A quiet place to write one poem: Joseph, Advent Week 3 — Peace.">
+<meta name="referrer" content="no-referrer">
+<meta name="robots" content="noindex, nofollow">
+<meta name="googlebot" content="noindex, nofollow">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%232b2621'/%3E%3Cpath d='M16 6c2.6 3.4 4.4 5.6 4.4 8.6A4.4 4.4 0 0 1 16 19a4.4 4.4 0 0 1-4.4-4.4C11.6 11.600 13.400 9.400 16 6Z' fill='%23e0a458'/%3E%3Crect x='14.800' y='19.500' width='2.400' height='7' rx='1.200' fill='%23e9e2d3'/%3E%3C/svg%3E">
+<script>
+  // Set the theme before first paint so there is no flash. (app.js keeps it in sync.)
+  (function () {
+    var t = 'paper';
+    try {
+      var s = JSON.parse(localStorage.getItem('poem-composer:v1') || 'null');
+      var pref = (s && s.settings && s.settings.theme) || 'auto';
+      t = pref === 'auto'
+        ? (window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches ? 'night' : 'paper')
+        : pref;
+    } catch (e) {}
+    document.documentElement.setAttribute('data-theme', t);
+  })();
+</script>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<main id="stage">
+  <div id="page">
+    <div id="paper">
+      <div id="mirror" aria-hidden="true"></div>
+      <textarea id="editor" aria-label="The poem" spellcheck="false" autocomplete="off"
+                autocapitalize="sentences" autocorrect="off" wrap="soft"
+                placeholder="Could you imagine that—"></textarea>
+    </div>
+  </div>
+</main>
+
+<noscript><p class="noscript">Poem Composer needs JavaScript. Your poem lives in <code>drafts/joseph-drafts.md</code>.</p></noscript>
+
+<!-- Quiet status: appears on pointer move or when you pause, never while you type -->
+<div id="hud" aria-live="off">
+  <div class="hud-inner">
+    <span id="hud-save" class="hud-save" title="Saved on this device as you write"></span>
+    <button id="hud-count" class="hud-count" type="button" title="Words and read-aloud time. Click for the full check (⌥C)">
+      <span id="hud-words"></span>
+      <span class="hud-sep">·</span>
+      <span id="hud-target"></span>
+      <span class="hud-sep">·</span>
+      <span id="hud-time"></span>
+    </button>
+    <span id="hud-meter" class="meter" aria-hidden="true"><i class="meter-band"></i><i class="meter-fill"></i></span>
+    <button id="hud-menu" class="hud-menu" type="button" title="Everything else: verses, words, drafts, the brief, read aloud">
+      <kbd>⌘K</kbd>
+    </button>
+  </div>
+</div>
+
+<!-- Side panel: one at a time (verse, words, drafts, brief, check, export) -->
+<aside id="panel" hidden aria-label="Help panel">
+  <header class="panel-head">
+    <h2 id="panel-title" class="panel-title"></h2>
+    <div id="panel-sub" class="panel-sub"></div>
+    <button id="panel-close" class="icon-btn" type="button" aria-label="Close panel (Esc)" title="Close (Esc)">
+      <svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M3 3l10 10M13 3L3 13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" fill="none"/></svg>
+    </button>
+  </header>
+  <div id="panel-body" class="panel-body"></div>
+</aside>
+
+<!-- Command palette -->
+<div id="palette" hidden>
+  <div class="palette-card" role="dialog" aria-label="Commands">
+    <input id="palette-q" type="text" placeholder="Go to…  verse · words · drafts · brief · read aloud · export" autocomplete="off" spellcheck="false" aria-label="Search commands">
+    <ul id="palette-list" role="listbox"></ul>
+    <div class="palette-foot"><span><kbd>↑</kbd><kbd>↓</kbd> choose</span><span><kbd>↵</kbd> go</span><span><kbd>Esc</kbd> back to the poem</span></div>
+  </div>
+</div>
+
+<!-- Read aloud / rehearse -->
+<div id="rehearse" hidden role="dialog" aria-label="Read aloud">
+  <div id="rehearse-poem"></div>
+  <div id="rehearse-bar">
+    <div class="rb-left">
+      <button id="rb-play" type="button" class="rb-btn rb-main" aria-label="Play or pause (Space)">Play</button>
+      <button id="rb-restart" type="button" class="rb-btn" title="Back to the top (R)">Restart</button>
+    </div>
+    <div class="rb-mid">
+      <div class="seg" role="group" aria-label="How to rehearse">
+        <button id="rb-mode-pace" type="button" class="seg-btn" title="Silent: the lines light up at reading pace">Pace</button>
+        <button id="rb-mode-listen" type="button" class="seg-btn" title="Hear it spoken by your computer's voice">Listen</button>
+      </div>
+      <div class="seg" role="group" aria-label="Pace">
+        <button type="button" class="seg-btn" data-pace="110">Slow</button>
+        <button type="button" class="seg-btn" data-pace="130">Pew</button>
+        <button type="button" class="seg-btn" data-pace="150">Brisk</button>
+      </div>
+      <label id="rb-voice-wrap" class="rb-voice">Voice <select id="rb-voice"></select></label>
+    </div>
+    <div class="rb-right">
+      <span id="rb-clock" class="rb-clock">0:00</span>
+      <span id="rb-est" class="rb-est"></span>
+      <button id="rb-exit" type="button" class="rb-btn" title="Back to writing (Esc)">Done</button>
+    </div>
+  </div>
+  <div id="rehearse-note" class="rehearse-note" aria-live="polite"></div>
+</div>
+
+<div id="toast" role="status" aria-live="polite"></div>
+<pre id="print-sheet" aria-hidden="true"></pre>
+
+<script src="js/core.js"></script>
+<script src="js/data.js"></script>
+<script src="js/csb.js"></script>
+<script src="js/api.js"></script>
+<script src="js/store.js"></script>
+<script src="js/editor.js"></script>
+<script src="js/panels.js"></script>
+<script src="js/rehearse.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
