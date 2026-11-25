@@ -47,7 +47,7 @@
   document.querySelectorAll(".reveal").forEach((el) => (io ? io.observe(el) : el.classList.add("in")));
 
   /* ---------- RSVP countdown ---------- */
-  const deadline = new Date(2026, 11, 1, 23, 59);
+  const deadline = new Date(2026, 10, 27, 23, 59);
   const days = Math.ceil((deadline - new Date()) / 864e5);
   if (days > 0) {
     const c = $("#countdown");
@@ -183,15 +183,14 @@
   }
 
   /* ---------- RSVP ---------- */
-  const form = $("#rsvp-form"), msg = $("#form-msg"), weeks = $("#weeks"), other = $("#other-field");
+  const form = $("#rsvp-form"), msg = $("#form-msg"), other = $("#other-field");
   const thanks = $("#thanks"), sendBtn = form.querySelector(".send");
   form.addEventListener("change", (e) => {
     if (e.target.name !== "attending") return;
     const yes = e.target.value === "yes";
-    weeks.hidden = !yes;
     other.hidden = false;
-    $("#other-label").textContent = yes ? "Other dates you can't make, or anything else" : "Anything you want to tell me?";
-    $("#other").placeholder = yes ? "e.g. can't fly out until Apr 24" : "Optional";
+    $("#other-label").textContent = yes ? "Anything else? (optional)" : "Anything you want to tell me?";
+    $("#other").placeholder = yes ? "e.g. flying with you from San Antonio" : "Optional";
   });
 
   function confetti() {
@@ -225,7 +224,7 @@
     if (!attending) { msg.textContent = "Let me know if you're in or out."; form.querySelector("[name=attending]").focus(); return; }
     const data = {
       name, attending,
-      cant_make_weeks: attending === "yes" ? fd.getAll("weeks").join(", ") : "",
+      cant_make_weeks: "",
       cant_make_other: (fd.get("other") || "").trim(),
       company: fd.get("company") || "",
       sent_at: new Date().toISOString(),
@@ -264,7 +263,7 @@
     const yes = d.attending === "yes";
     $("#thanks-big").textContent = yes ? `You're in, ${first}! 🤙` : `Bummer, ${first}! 🧡`;
     $("#thanks-small").textContent = yes
-      ? "Got it. I'll lock down the house and the exact dates once the headcount's in."
+      ? "Got it. I'll lock in the resort once the headcount's in."
       : "Thanks for letting me know. You'll be missed out there.";
     $("#test-note").hidden = !testMode;
     form.hidden = true; thanks.hidden = false; thanks.focus();
