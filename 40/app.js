@@ -183,14 +183,13 @@
   }
 
   /* ---------- RSVP ---------- */
-  const form = $("#rsvp-form"), msg = $("#form-msg"), weeks = $("#weeks"), other = $("#other-field");
+  const form = $("#rsvp-form"), msg = $("#form-msg"), other = $("#other-field");
   const thanks = $("#thanks"), sendBtn = form.querySelector(".send");
   form.addEventListener("change", (e) => {
     if (e.target.name !== "attending") return;
     const yes = e.target.value === "yes";
-    weeks.hidden = !yes;
     other.hidden = false;
-    $("#other-label").textContent = yes ? "Other dates you can't make, or anything else" : "Anything you want to tell me?";
+    $("#other-label").textContent = yes ? "Anything else? (optional)" : "Anything you want to tell me?";
     $("#other").placeholder = yes ? "e.g. flying with you from San Antonio" : "Optional";
   });
 
@@ -225,7 +224,7 @@
     if (!attending) { msg.textContent = "Let me know if you're in or out."; form.querySelector("[name=attending]").focus(); return; }
     const data = {
       name, attending,
-      cant_make_weeks: attending === "yes" ? fd.getAll("weeks").join(", ") : "",
+      cant_make_weeks: "",
       cant_make_other: (fd.get("other") || "").trim(),
       company: fd.get("company") || "",
       sent_at: new Date().toISOString(),
